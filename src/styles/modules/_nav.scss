@@ -1,0 +1,380 @@
+
+
+h2 {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 40px;
+}
+
+.container {
+  width: 100%;
+  padding: 0 20px;
+  max-width: 1480px;
+  margin: 0 auto;
+}
+
+.content {
+  display: flex;
+  margin-top: 30px;
+  align-items: flex-start;
+  @media screen and (max-width: $bp-small) {
+    display: block;
+  }
+}
+
+
+
+.feed {
+  flex: 0 0 200px;
+  max-width: 200px;
+  padding-left: 30px;
+
+  @media screen and (max-width: $bp-small) {
+    max-width: none;
+    padding-left: 0px;
+  }
+
+  .feed-item {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+
+    &:last-child {
+      border: none;
+    }
+  }
+
+  .feed-post {
+    font-size: 16px;
+    color: #999;
+    font-weight: 300;
+    line-height: 1.4;
+    margin-bottom: 15px;
+  }
+
+  .feed-time {
+    font-size: 10px;
+    color: $purple;
+  }
+}
+
+
+.grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 0px 0 0;
+  flex-grow: 1;
+}
+
+.grid-item {
+  flex: 0 0 31%;
+  height: 250px;
+  //max-height: 250px;
+  margin-bottom: 30px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+
+  @media (max-width: 1100px) {
+    flex: 0 0 49%;
+  }
+
+  @media (max-width: 800px) {
+    flex: 0 0 100%;
+  }
+
+  &:after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    opacity: 0.6;
+    z-index: 1;
+    background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,0) 0%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center, rgba(255,255,255,0) 0%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.1);
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transform: scale(1);
+    transition: .4s ease-out;
+  }
+
+  .fa-star {
+    color: white;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 5;
+  }
+
+  &--active {
+    .fa-star {
+      color: #ffd800;
+    }
+  }
+
+  .title {
+    font-size: 18px;
+    color: white;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    z-index: 5;
+    font-weight: 300;
+  }
+
+  .release-date {
+    font-size: 12px;
+    color: white;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 5;
+    text-transform: uppercase;
+  }
+}
+
+nav {
+  background: $purple;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  transition: $basic-transition;
+
+  &.sticky {
+    position: fixed;
+    height: 40px;
+    top: 0;
+    z-index: 999;
+  }
+
+  @media screen and (max-width: $bp-small) {
+    position: relative;
+    height: 50px;
+
+    &.sticky {
+      position: relative;
+      height: 50px;
+    }
+  }
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 30%;
+  width: auto;
+  transition: $basic-transition;
+}
+
+.nav-items {
+  transition: $basic-transition;
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: $bp-small) {
+    width: 240px;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transform: translateX(240px);
+    background: #eee;
+    display: block;
+    z-index: 10;
+
+    .nav-active & {
+      transform: translateX(0);
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+    }
+  }
+
+  li {
+    display: inline-block;
+    color: white;
+    text-transform: uppercase;
+    margin-right: 50px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    height: 100%;
+    align-items: center;
+
+    &:after {
+      bottom: 0px;
+      position: absolute;
+      content: '';
+      background: white;
+      width: 100%;
+      height: 3px;
+      left: 0;
+      display: none;
+    }
+
+    &:hover {
+      &:after {
+        display: block;
+      }
+    }
+
+    @media screen and (max-width: $bp-small) {
+      display: block;
+      padding: 15px 20px 0;
+      margin-bottom: 15px;
+      color: $purple;
+      font-weight: 400;
+      height: auto;
+
+      &:hover {
+        &:after {
+          width: 4px;
+          height: 100%;
+          left: 0;
+          position: absolute;
+          content: '';
+          background: $purple;
+          top: 6px;
+        }
+      }
+    }
+
+    &:after {
+      bottom: 0;
+      background: white;
+      position: absolute;
+      content: '';
+    }
+
+    &:last-child {
+      margin-right: 0;
+
+      @media screen and (max-width: $bp-small) {
+        margin-bottom: 0;
+      }
+    }
+
+    &:first-child {
+      @media screen and (max-width: $bp-small) {
+        margin-top: 45px;
+      }
+    }
+  }
+}
+
+.footer {
+  background: #e0e0e0;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  img {
+    height: 60px;
+    width: auto;
+    opacity: 0.1;
+  }
+
+  .copy {
+    font-size: 12px;
+    opacity: 0.15;
+    margin-top: 5px;
+  }
+}
+
+.nav-trigger {
+  position: relative;
+  z-index: 100;
+  display: none;
+  margin-left: -25px;
+  width: 29px;
+  height: 50px;
+  cursor: pointer;
+  transition: $basic-transition;
+
+  @media screen and (max-width: $bp-small) {
+    display: block;
+  }
+
+  span {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 4%;
+    background-color: white;
+    font-size: 0px;
+    -webkit-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    &:before, &:after {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: white;
+      content: '';
+      -webkit-transition: -webkit-transform 0.3s, background-color 0.3s;
+      transition: transform 0.3s, background-color 0.3s;
+    }
+
+    &:before {
+      transform: translateY(-300%);
+    }
+
+    &:after {
+      transform: translateY(300%);
+    }
+
+    .nav-active & {
+      background: transparent;
+
+      &:before, &:after {
+        background: $purple;
+      }
+
+      &:before {
+        transform: translateY(0) rotate(45deg);
+      }
+
+      &:after {
+        transform: translateY(0) rotate(-45deg);
+      }
+    }
+  }
+}

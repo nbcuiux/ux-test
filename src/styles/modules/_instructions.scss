@@ -1,0 +1,73 @@
+
+
+.instructions {
+	max-width: 1200px;
+	margin: 0px auto;
+	padding-top: 40px;
+	padding: 40px;
+
+	h1 {
+		margin-bottom: 40px;
+		font-size: 40px;
+	}
+
+	h2 {
+		margin-bottom: 20px;
+	}
+
+	h3 {
+		//font-weight: bold;
+		margin-bottom: 20px;
+		border-bottom: 1px solid #DDD;
+		padding-bottom: 5px;
+	}
+
+	p {
+		line-height: 1.5;
+		max-width: 600px;
+	}
+
+	li {
+		line-height: 1.5;
+	}
+
+
+	ol, ul {
+		margin-left: 40px;
+		margin-bottom: 40px;
+	}
+
+	ol li {
+		list-style-type: decimal;
+		padding: 5px 0px;
+
+	}
+
+
+	ul li {
+		list-style-type: disc;
+		padding: 5px 0px;
+
+	}
+
+	table {
+		background: #FFF;
+		margin-bottom: 40px;
+	}
+
+	td, th {
+		padding: 15px;
+		border: 1px solid #DDD;
+	}
+
+	th {
+		font-weight: bold;
+	}
+
+
+}
+
+.screenshot {
+	min-height: 400px;
+	background: #CCC;
+}

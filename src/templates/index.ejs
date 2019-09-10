@@ -1,0 +1,387 @@
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="assets/css/instructions.css">
+</head>
+
+	<body>
+		<div class="opening"></div>
+    <section>
+      <div class="container">
+        <h1>NBCU UX Code Test</h1>
+        <p>Welcome to the NBCU UX css code test. To complete this test, you must code up a responsive website using HTML/CSS/Javascript. You will be given screenshots for multiple screen sizes and all of the assets.</p>
+        <p>You will use JSFiddle to complete the test. Please follow the instructions below.</p>
+        <h2>Final Results</h2>
+        <div class="results">
+          <a class="website-item" href="assets/img/screenshot_lg.png" target="_blank">
+            <div class="preview-container">
+              <img src="assets/img/screenshot_lg.png" />
+            </div>
+            <div>Desktop</div>
+          </a>
+          <a class="website-item" href="assets/img/screenshot_tablet.png" target="_blank">
+            <div class="preview-container">
+              <img src="assets/img/screenshot_tablet.png" />
+            </div>
+            <div>Tablet</div>
+          </a>
+          <a class="website-item" href="assets/img/screenshot_phone.png" target="_blank">
+            <div class="preview-container">
+              <img src="assets/img/screenshot_phone.png" />
+            </div>
+            <div>Phone</div>
+          </a>
+        </div>
+
+        <h2>Instructions</h2>
+        <ol>
+    	   <li>Go to <a href="https://jsfiddle.net/azwier/ds2zyr7v/" target="_blank">https://jsfiddle.net/azwier/ds2zyr7v/</a>.</li>
+         <li>In the header menu, click <strong>fork</strong> to create your own copy of the base fiddle.</li>
+         <li>Insert your HTML/CSS/Javascript in the approriate panels, and click "Run" to view your website.</li>
+         <li>When you are happy with your site and ready to finish, click <strong>update</strong> and copy the URL.</li>
+         <li>Fill out the form below and submit.</li>
+       </ol>
+       <div class="submission-form">
+         <form class="form-horizontal" id="contact" role="form" method="post" action="contact.php">
+           <div class="form-group">
+             <label for="name">Name<span>*</span></label>
+             <input type="text" class="form-control" id="name" name="name" placeholder="First & Last Name" required>
+           </div>
+           <div class="form-group">
+             <label for="email">Email<span>*</span></label>
+             <input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com" required>
+           </div>
+           <div class="form-group">
+             <label for="url">Link to jsfiddle<span>*</span></label>
+             <input type="text" class="form-control" id="url" name="url" placeholder="e.g. https://jsfiddle.net/..." required>
+           </div>
+           <div class="form-group">
+             <input id="submit" name="submit" type="submit" value="Send">
+           </div>
+           <div class="loading-msg" id="loading">
+            Submitting...
+           </div>
+           <div class="success-msg" id="success">
+              Thank you for submitting your test! We will be in touch shortly.
+           </div>
+            <div class="fail-msg" id="fail">
+              Whoops something went wrong with your submission, please try again.
+           </div>
+           <div class="form-group">
+           </div>
+        </form>
+       </div>
+     </div>
+  </section>
+  <section>
+    <div class="container">
+      <h1>Brief</h1>
+      <div class="brief-section">
+        <h2>Tech guidelines</h2>
+        <p>Please make sure you stick by these guidelines:</p>
+        <ul>
+          <li>You may use raw CSS or SASS</li>
+          <li>You may use font-awesome</li>
+          <li>You should use the google font Roboto, which is already set up in your fiddle</li>
+          <li>You may <strong>not</strong> use bootstrap css - we want to see you write your own css</li>
+          <li>You may use jquery or any other javascript frameworks</li>
+        </ul>
+      </div>
+      <div class="brief-section">
+        <h2>Header</h2>
+        <div class="brief-item stacked">
+  		    <p>There will be a global navigation. The links on the navigation do <strong>not</strong> need to work for this test.</p>
+    			<div class="screenshot">
+            <img src="assets/img/website-desktop.jpg" />
+    			</div>
+        </div>
+        <div class="brief-item stacked">
+          <p>When the broswer window size goes down to 600px, the header items should fold into a nav menu that opens/closes with a hamburger icon.</p>
+  				<div class="video">
+            <video controls loop onclick="this.paused ? this.play() : this.pause();">
+              <source src="assets/img/responsive-navigation.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+        <div class="brief-item left">
+          <p>As per this video, the hamburger icon should turn turn into an '<strong>X</strong>' icon when opened.</p>
+ 				  <div class="video">
+            <video controls loop onclick="this.paused ? this.play() : this.pause();">
+              <source src="assets/img/mobile-navigation.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+        <div class="brief-item stacked">
+          <h4>NICE-TO-HAVE</h4>
+          <p>The header can be sticky on the top of the page, as per the video. This is a feature that is nice to have, but not required.</p>
+  				<div class="video">
+            <video controls loop onclick="this.paused ? this.play() : this.pause();">
+              <source src="assets/img/navigation-shrink.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+			</div>
+    </section>
+
+      <section>
+        <div class="container">
+	        <div class="brief-section">
+    				<h2>Grid</h2>
+            <div class="brief-item">
+  						<p>There will be a grid with 9 film items.</p>
+  						<div class="screenshot">
+                <img src="assets/img/desktop-view.jpg" />
+              </div>
+            </div>
+            <div class="brief-item left">
+  						<p>When the window size goes below 1100px, the grid should fold into 2 columns.</p>
+  						<div class="screenshot">
+                <img src="assets/img/tablet-view.jpg" />
+              </div>
+						</div>
+            <div class="brief-item right">
+              <div class="screenshot">
+                <img src="assets/img/mobile-view.jpg" />
+  						</div>
+  						<p>When the window size goes below 800px, the grid should fold into 1 column.</p>
+            </div>
+			     </div>
+         </div>
+       </section>
+
+       <section>
+         <div class="container">
+           <div class="brief-section">
+             <h2>Tiles</h2>
+             <div class="brief-item left">
+               <p>Using the image assets provided, place each film item into the grid with its corresponding information. Be sure to style each item as it is shown and all text is readable.</p>
+               <div class="screenshot">
+                 <img src="assets/img/tile-item.jpg" />
+               </div>
+             </div>
+             <div class="brief-item right">
+               <video controls loop onclick="this.paused ? this.play() : this.pause();">
+                 <source src="assets/img/tile-hover.mp4" type="video/mp4">
+                 Your browser does not support the video tag.
+               </video>
+               <p>As shown in the video, the image should zoom in when hovering over a tile.</p>
+             </div>
+             <div class="brief-item left">
+               <p>When clicking on a tile, the favorites star should change its color to indicate the active state as shown in the video.</p>
+               <video controls loop onclick="this.paused ? this.play() : this.pause();">
+                 <source src="assets/img/tile-click.mp4" type="video/mp4">
+                 Your browser does not support the video tag.
+               </video>
+             </div>
+            </div>
+          </div>
+        </section>
+
+       <section>
+         <div class="container">
+           <div class="brief-section">
+      				<h2>Feed</h2>
+              <div class="brief-item left">
+    						<p>There will be a feed on the right side of the grid. The width of the feed column should be 200px, and the column should responsively keep its width.</p>
+					      <div class="screenshot">
+                  <img src="assets/img/feed-view.jpg" />
+    						</div>
+              </div>
+              <div class="brief-item right">
+                <div class="screenshot">
+                  <img src="assets/img/feed-view-mobile.jpg" />
+    						</div>
+    						<p>When the window size goes below 600px, the feed will fold underneath the single-column grid.</p>
+              </div>
+      			</div>
+          </div>
+        </section>
+
+        <section>
+          <div class="container">
+            <div class="brief-section">
+       				<h2>Footer</h2>
+               <div class="brief-item stacked">
+     						<p>There will be a footer at the very bottom of the page. Use the provided color and logo.</p>
+ 					      <div class="screenshot" style="height: auto;">
+                   <img src="assets/img/footer-view.jpg" />
+     						</div>
+               </div>
+       			</div>
+           </div>
+         </section>
+
+        <section>
+          <div class="container">
+            <h1>Content</h1>
+      			<div class="brief-section">
+      				<h2>Navigation Items</h2>
+              <ol>
+
+        				<li>Shows</li>
+
+        				<li>Movies</li>
+
+        				<li>Careers</li>
+        			</ol>
+            </div>
+          </section>
+
+<section>
+  <div class="container">
+	   <div class="brief-section">
+     <h2>Tile Content</h2>
+     <table>
+	    <tr>
+				<th>Title</th>
+				<th>Date</th>
+				<th>Image URL</th>
+			</tr>
+			<tr>
+				<td>Sing</td>
+				<td>Dec. 21st, 2016</td>
+				<td><a href="assets/img/sing-poster.jpg" target="_blank">http://nbcuxlab.com/Design_Test/assets/img/sing-poster.jpg</a></td>
+			</tr>
+			<tr>
+				<td>Jason Bourne</td>
+				<td>July 29th, 2016</td>
+				<td><a href="assets/img/jason-bourne-poster.jpg" target="_blank">http://nbcuxlab.com/Design_Test/assets/img/jason-bourne-poster.jpg</a></td>
+			</tr>
+			<tr>
+				<td>The Secret Life of Pets</td>
+				<td>July 8th, 2016</td>
+				<td><a href="assets/img/secret-life-of-pets-poster.jpg" target="_blank">http://nbcuxlab.com/Design_Test/assets/img/secret-life-of-pets-poster.jpg</a></td>
+			</tr>
+			<tr>
+				<td>The Purge: Election Year</td>
+				<td>July 1st, 2016</td>
+				<td><a href="assets/img/the-purge-election-year-poster.jpg" target="_blank">http://nbcuxlab.com/Design_Test/assets/img/the-purge-election-year-poster.jpg</a></td>
+			</tr>
+      <tr>
+				<td>Central Intelligence</td>
+				<td>June 17th, 2016</td>
+				<td><a href="assets/img/central-intelligence-poster.jpg" target="_blank">http://nbcuxlab.com/Design_Test/assets/img/central-intelligence-poster.jpg</a></td>
+			</tr>
+      <tr>
+				<td>Warcraft</td>
+				<td>June 10th, 2016</td>
+				<td><a href="assets/img/warcraft-poster.jpg" target="_blank">http://nbcuxlab.com/Design_Test/assets/img/warcraft-poster.jpg</a></td>
+			</tr>
+      <tr>
+				<td>Neighbors 2</td>
+				<td>May 20th, 2016</td>
+				<td><a href="assets/img/neighbors-2-poster.jpg" target="_blank">http://nbcuxlab.com/Design_Test/assets/img/neighbors-2-poster.jpg</a></td>
+			</tr>
+      <tr>
+				<td>Ted 2</td>
+				<td>June 26th, 2015</td>
+				<td><a href="assets/img/ted-2-poster.jpg" target="_blank">http://nbcuxlab.com/Design_Test/assets/img/ted-2-poster.jpg</a></td>
+			</tr>
+      <tr>
+				<td>Jurassic World</td>
+				<td>June 12th, 2015</td>
+				<td><a href="assets/img/jurassic-world-poster.jpg" target="_blank">http://nbcuxlab.com/Design_Test/assets/img/jurassic-world-poster.jpg</a></td>
+			</tr>
+		</table>
+	</div>
+</section>
+
+<section>
+  <div class="container">
+		<div class="brief-section">
+      <h2>Feed Content</h2>
+      <p>Be sure to repeat this post 9 times in your feed section.</p>
+      <table>
+				<tr>
+					<th>Post</th>
+					<th>Date</th>
+				</tr>
+				<tr>
+					<td>Get a sneek peek of Despicable Me 3 with your NBC ID</td>
+					<td>Friday | 12:39pm</td>
+				</tr>
+			</table>
+		</div>
+  </section>
+
+  <section>
+    <div class="container">
+			<div class="brief-section">
+        <h2>Additional Assets</h2>
+        <table>
+  				<tr>
+  					<th>Asset</th>
+  					<th>Value</th>
+  				</tr>
+  				<tr>
+  					<td>Purple</td>
+  					<td>#400095</td>
+  				</tr>
+          <tr>
+  					<td>Background Grey</td>
+  					<td>#EEEEEE</td>
+  				</tr>
+          <tr>
+  					<td>Footer Grey</td>
+  					<td>#E0E0E0</td>
+  				</tr>
+          <tr>
+  					<td>Star Icon</td>
+  					<td><a href="assets/img/star.svg" target="_blank">http://nbcuxlab.com/Design_Test/assets/img/star.svg</a></td>
+  				</tr>
+          <tr>
+  					<td>UX Team Logo</td>
+  					<td><a href="assets/img/ux-logo.svg" target="blank">http://nbcuxlab.com/Design_Test/assets/img/ux-logo.svg</a></td>
+  				</tr>
+          <tr>
+            <td>NBCUniversal Logo</td>
+            <td><a href="assets/img/nbcuniversal-logo.svg" target="blank">http://nbcuxlab.com/Design_Test/assets/img/nbcuniversal-logo.svg</a></td>
+          </tr>
+  			</table>
+			</div>
+    </section>
+    <div class="footer">
+      <img src="assets/img/ux-logo.svg" />
+      <div class="copy">A DPIM UX Production</div>
+    </div>
+
+		<script src="assets/js/app.js"></script>
+    <script>
+
+
+
+      $("form").submit(function(e) {
+        e.preventDefault();
+
+        var form = document.getElementById('contact');
+        var formData = new FormData(form);
+
+
+
+        var data = $(form).serialize(); //  <-----------
+        console.log( data );
+        $("#loading").show();
+        $("#submit").hide();
+        $.ajax({
+            url: 'contact.php',
+            data: data,
+            processData: false,
+            type: 'POST',
+            success: function ( result ) {
+                $("#loading").hide();
+                if (result === "success") {
+                  $("#success").show();
+                }
+                if (result === "fail") {
+                  $("#fail").show();
+                  $("#submit").show();
+                }
+            }
+        });
+      });
+    </script>
+	</body>
+</html>
